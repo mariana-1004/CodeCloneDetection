@@ -1,0 +1,34 @@
+# Virtual environment
+src/venv/
+venv/
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Generated embeddings
+data/embeddings/*
+!data/embeddings/.gitkeep
+
+# Trained model weights
+models/*
+!models/.gitkeep
+
+# PyTorch / model files
+*.pt
+*.pth
+*.ckpt
+
+# Logs and outputs
+logs/
+runs/
+outputs/
+*.log
+
+# OS files
+.DS_Store
