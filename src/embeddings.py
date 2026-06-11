@@ -1,10 +1,15 @@
 import torch
 from transformers import RobertaTokenizer, RobertaModel
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+token = os.getenv('HF_TOKEN')
 
 def load_codebert(model_name, device):
-    tokenizer = RobertaTokenizer.from_pretrained(model_name)
-    codebert = RobertaModel.from_pretrained(model_name).to(device)
+    tokenizer = RobertaTokenizer.from_pretrained(model_name, token=token)
+    codebert = RobertaModel.from_pretrained(model_name, token=token, use_safetensors=True).to(device)
 
     for param in codebert.parameters():
         param.requires_grad = False
