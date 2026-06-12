@@ -116,14 +116,16 @@ def main():
     )
 
     model, history = train_classifier(
-         train_embeddings,
-         train_labels,
-         device,
-         batch_size=BATCH_SIZE,
-         epochs=EPOCHS,
-         learning_rate=LEARNING_RATE,
-         dropout=DROPOUT,
-         model_save_path=MODEL_SAVE_PATH
+        train_embeddings,
+        train_labels,
+        device,
+        batch_size=BATCH_SIZE,
+        epochs=EPOCHS,
+        learning_rate=LEARNING_RATE,
+        dropout=DROPOUT,
+        model_save_path=MODEL_SAVE_PATH,
+        use_hard_negative_mining=True,
+        hard_negative_ratio=0.5
     )
 
     evaluate_classifier(
