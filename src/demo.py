@@ -59,18 +59,13 @@ DEMO_PAIRS = [
     },
     {
         "func1": (
-            "public int factorial(int n) {\n"
-            "    if (n <= 1) return 1;\n"
-            "    return n * factorial(n - 1);\n"
-            "}"
+            "public long calcular(int n) { return java.util.stream.LongStream.rangeClosed(1, n).reduce(1, (a, b) -> a * b); }"
         ),
         "func2": (
-            "public String reverse(String s) {\n"
-            "    return new StringBuilder(s).reverse().toString();\n"
-            "}"
+            "public long procesar(int n) { long[] b = new long[n + 1]; b[0] = 1; int i = 1; while (i <= n) { b[i] = b[i - 1] * i++; } return b[n]; }"
         ),
-        "label": 0,
-        "description": "Non-clone (factorial vs reverse)",
+        "label": 1,
+        "description": "Harder semantic clone (factorial with streams vs iterative)",
     },
     {
         "func1": (

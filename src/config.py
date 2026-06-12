@@ -14,4 +14,4 @@ TRAIN_LABELS_PATH = "../data/embeddings/train_labels.pt"
 TEST_EMBEDDINGS_PATH = "../data/embeddings/test_embeddings.pt"
 TEST_LABELS_PATH = "../data/embeddings/test_labels.pt"
 
-MODEL_SAVE_PATH = "../models/clone_classifier_hardNegative.pt"
+MODEL_SAVE_PATH = "../models/E3_HardNegatives/clone_classifier_hardNegative.pt"
