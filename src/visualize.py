@@ -55,7 +55,8 @@ def plot_confusion_matrix(labels, predictions, save_dir="."):
         labels, predictions,
         cmap="Blues",
         colorbar=False,
-        ax=ax
+        ax=ax,
+        display_labels=["No clone", "Clone"]
     )
     ax.set_title("Confusion Matrix")
     path = os.path.join(save_dir, "confusion_matrix.png")
