@@ -67,7 +67,7 @@ def evaluate_classifier(
     print("\nClassification Report:")
     print(classification_report(all_labels, all_predictions))
 
-    return {
+    results = {
         "accuracy": accuracy,
         "precision": precision,
         "recall": recall,
@@ -76,3 +76,9 @@ def evaluate_classifier(
         "labels": all_labels,
         "probabilities": all_probabilities
     }
+
+    results_path = model_path.replace(".pt", "_results.pt")
+    torch.save({"labels": all_labels, "predictions": all_predictions}, results_path)
+    print(f"Evaluation results saved at: {results_path}")
+
+    return results

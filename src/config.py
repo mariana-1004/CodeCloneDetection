@@ -9,9 +9,9 @@ TEST_SAMPLE_SIZE = None
 
 THRESHOLD = 0.5
 
-TRAIN_EMBEDDINGS_PATH = "../data/embeddings/train_embeddings_full.pt"
-TRAIN_LABELS_PATH = "../data/embeddings/train_labels_full.pt"
-TEST_EMBEDDINGS_PATH = "../data/embeddings/test_embeddings_full.pt"
-TEST_LABELS_PATH = "../data/embeddings/test_labels_full.pt"
+TRAIN_EMBEDDINGS_PATH = "../data/embeddings/train_embeddings.pt"
+TRAIN_LABELS_PATH = "../data/embeddings/train_labels.pt"
+TEST_EMBEDDINGS_PATH = "../data/embeddings/test_embeddings.pt"
+TEST_LABELS_PATH = "../data/embeddings/test_labels.pt"
 
-MODEL_SAVE_PATH = "../models/clone_classifier_full.pt"
+MODEL_SAVE_PATH = "../models/clone_classifier_baseline.pt"

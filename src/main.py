@@ -115,7 +115,7 @@ def main():
          TEST_LABELS_PATH
     )
 
-    train_classifier(
+    model, history = train_classifier(
          train_embeddings,
          train_labels,
          device,
@@ -125,7 +125,7 @@ def main():
          dropout=DROPOUT,
          model_save_path=MODEL_SAVE_PATH
     )
-    
+
     evaluate_classifier(
          test_embeddings,
          test_labels,
